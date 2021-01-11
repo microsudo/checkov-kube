@@ -22,7 +22,7 @@ spec:
     resources:
       limits:
         cpu: "128Mi"
-        memoty: "500m"
+        memory: "500m"
       requests:
         cpu: "100m"
         memory: "64Mi"
@@ -33,5 +33,5 @@ spec:
       runAsNonRoot: true
       capabilities:
         drop:
-+        - NET_RAW
-+        - ALL
+         - NET_RAW
+         - ALL
