@@ -19,4 +19,4 @@ jobs:
       - name: Scan k8s manifests 
         run: |
           pip install checkov
-          checkov -f deployment.yaml --framework kubernetes
+          checkov -d examples --framework kubernetes
