@@ -15,7 +15,7 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: 3.9.1
-      - name: Scan k8s manifests - na
+      - name: Scan k8s manifests 
         run: |
           pip install checkov
           checkov -d examples --framework kubernetes
