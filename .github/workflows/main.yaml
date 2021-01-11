@@ -4,17 +4,19 @@ on:
     branches:
       - main
 jobs:
-  checkov-job:
-    runs-on: ubuntu-latest
-    name: checkov-action
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@master
+  build:
 
-      - name: Run Checkov action
-        id: checkov
-        uses: bridgecrewio/checkov-action@master
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.7]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python $
+        uses: actions/setup-python@v1
         with:
-          directory: .
-          skip_check: CKV_AWS_1 # suppress
-          framework: terraform
+          python-version: 3.9.1
+      - name: Scan k8s manifests 
+        run: |
+          pip install checkov
+          checkov -f deployment.yaml
