@@ -18,4 +18,5 @@ jobs:
       - name: Scan k8s manifests 
         run: |
           pip install checkov
-          checkov -d examples/redis --framework kubernetes
+          #checkov -d examples/redis --framework kubernetes
+          checkov -d corrected-examples/redis --framework kubernetes
