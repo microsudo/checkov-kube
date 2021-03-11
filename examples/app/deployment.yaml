@@ -4,6 +4,7 @@ metadata:
   name: link-unshorten
   labels:
     app: unshorten-api
+    tier: somewhere
 spec:
   replicas: 2
   selector:
