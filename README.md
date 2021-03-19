@@ -2,3 +2,5 @@
 
 *Microstack for testing and demo purposes*# checkov-kube
 # checkov-kube
+
+- Checking K8s manifest YAML files for security & compliance
